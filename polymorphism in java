@@ -46,15 +46,20 @@ public class poly {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Shape ob;
 Triangle obj=new Triangle();
-obj.draw();
-obj.erase();
+ob=obj;
+ob.draw();
+ob.erase();
 Square obj1=new Square();
-obj1.draw();
-obj1.erase();
+ob=obj1;
+ob.draw();
+ob.erase();
 Circle obj2=new Circle();
-obj2.draw();
-obj2.erase();
+ob=obj2;
+ob.draw();
+ob.erase();
 	}
 
 }
+
