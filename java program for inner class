@@ -1,0 +1,44 @@
+class Outer_test
+{
+ int a,b,c;
+Outer_test()
+{
+	a=10;
+	b=20;
+System.out.println("Test class constructor is call ");	
+}
+void disp()
+{
+	System.out.println("a is="+a+"b is="+b);
+	Outer_test.innerclass obj=new Outer_test.innerclass();
+	obj.disp1();
+}
+class innerclass
+{ 
+	int c,d,sub;
+	innerclass()
+	{
+	 c=20;
+	 d=10;
+	 System.out.println("inner class consturctor is call");
+	}
+	void disp1()
+	{
+		sub=c-d;
+		System.out.println("sub="+sub);
+	}
+}
+}
+public class Democlass {
+
+	public static void main(String[] args) {
+		
+		Outer_test obj1=new Outer_test();
+		obj1.disp();
+		Outer_test.innerclass obj=obj1.new innerclass();
+		obj.disp1();
+		// TODO Auto-generated method stub
+
+	}
+
+}
