@@ -1,0 +1,47 @@
+//Dushyant
+class Account
+{
+	private int acc_no;
+	private String name;
+	private String e_mail;
+	public void set_acc(int acc_no)
+	{
+		this.acc_no=acc_no;
+	
+	}
+	public void get_acc()
+	{
+		System.out.println("the account number is="+acc_no);
+	}
+	public void set_name(String name)
+	{
+		this.name=name;
+	
+	}
+	public void get_name()
+	{
+		System.out.println("the account holder name is="+name);
+	}
+	public void set_email(String e_mail)
+	{
+		this.e_mail=e_mail;
+	
+	}
+	public void get_email()
+	{
+		System.out.println("the account holder email is="+e_mail);
+	}
+}
+public class encapsulation {
+
+	public static void main(String[] args) {
+	Account obj=new Account();
+	obj.set_acc(133);
+	obj.get_acc();
+	obj.set_name("yes");
+	obj.get_name();
+	obj.set_email("pk@123");
+	obj.get_email();
+	}
+
+}
