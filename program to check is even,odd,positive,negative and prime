@@ -1,0 +1,83 @@
+package basic;
+
+import java.util.Scanner;
+ 
+
+public class Number {
+	 private static double n;
+	boolean isZero(double n)
+	{
+	if(n==0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	}
+	boolean isPositive(double n)
+	{
+		if(n>=0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	boolean isNegative(double n)
+	{
+		if(n<0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	boolean isEven(double n)
+	{
+		if(n%2==0)
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+		
+	}
+	boolean isOdd(double n)
+	{
+	if(n%2!=0)
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+	}
+
+	public static void main(String[] args) {
+	Scanner obj=new Scanner(System.in);
+	n=obj.nextDouble();
+	Number ob=new Number();
+boolean res1=ob.isZero(n);
+System.out.println("number is zero :"+res1);
+	boolean res2=ob.isPositive(n);
+	System.out.println("number is positive :"+res2);
+	boolean res3=ob.isNegative(n);
+	System.out.println("number is negative:"+res1);
+	boolean res4=ob.isEven(n);
+	System.out.println("number is even:"+res1);
+	boolean res5=ob.isOdd(n);
+	System.out.println("number is odd:"+res1);
+	}
+
+}
