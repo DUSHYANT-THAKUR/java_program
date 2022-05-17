@@ -1,0 +1,34 @@
+class exc
+{
+	int a,b;
+	exc()
+	{
+		a=b=0;
+	}
+	exc(int a,int b)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	void func()
+	{
+		try
+		{
+			int c=a/b;
+			System.out.println("will not print");
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println(e.toString());
+		}
+	}
+}
+public class exception_program {
+
+	public static void main(String[] args) {
+exc obj1=new exc(10,0);
+obj1.func();
+
+	}
+
+}
