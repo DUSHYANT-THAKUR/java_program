@@ -1,0 +1,28 @@
+class Thread1 implements Runnable
+{
+	public void run()
+	{
+		System.out.println("the thread1 has been created using runnable interface");
+	}
+
+	
+}
+class Thread2 implements Runnable
+ {
+	public void run()  
+	{
+		System.out.println("the thread2 has been created using runnable interface");
+	}
+}
+public class MainThread {
+
+	public static void main(String[] args) {
+		Thread1 t1=new Thread1();
+		Thread ob=new Thread(t1);
+		ob.run();
+		Thread2 t2=new Thread2();
+		Thread ob1=new Thread(t2);
+		ob1.start();
+	}
+
+}
