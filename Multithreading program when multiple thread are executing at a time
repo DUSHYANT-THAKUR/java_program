@@ -1,0 +1,42 @@
+class Nt extends Thread
+{
+	Nt(String Name)
+	{
+		super(Name);
+	}
+	public void run()
+	{
+	try
+	{
+		for(int i=5;i>0;i--)
+		{
+			System.out.println("child class"+i);
+			Thread.sleep(500);
+		}
+	}
+	catch(InterruptedException e)
+	{
+		System.out.println(e);
+	}
+	}
+}
+public class Demo2 {
+
+	public static void main(String[] args) {
+		Nt obj=new Nt("Thread");
+		obj.start();
+try
+{
+	for(int i=5;i>0;i--)
+	{
+		System.out.println("Main thread");
+		Thread.sleep(1000);
+	}
+}
+catch(InterruptedException e)
+{
+	System.out.println(e);
+}
+	}
+
+}
