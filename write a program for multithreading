@@ -1,0 +1,59 @@
+
+class Exam1 extends Thread
+{
+	Exam1(String name)
+	{
+		super(name);
+	}
+	public void run()
+	{
+	try
+	{
+	for(int i=0;i<10;i++)
+	{
+		System.out.println(i);
+		Thread.sleep(100);
+	}
+	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+	
+}
+}
+class Exam2 extends Thread
+{
+	Exam2(String name)
+	{
+	super(name);	
+	}
+	public void run()
+	{
+	try
+	{
+	for(int i=11;i<20;i++)
+	{
+		System.out.println(i);
+		Thread.sleep(200);
+	}
+	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+}
+}
+public class Demo3 {
+	
+
+	public static void main(String[] args) {
+Exam1 obj=new Exam1("Thread1");
+Exam2 ob=new Exam2("Thread2");
+obj.start();
+ob.start();
+
+
+	}
+
+}
