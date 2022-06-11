@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class node
+{
+	int info;
+	node next;
+	node(int info)
+	{
+		this.info=info;
+		//this.next=next;
+	}
+
+public node head=null;
+void insetfrombegin(int data)
+{
+	//node head = null;
+	node obj=new node(data);
+	if(head==null)
+	{
+	head=obj;	
+	}
+	else
+	{
+		obj.next=head;
+		head=obj;
+	}
+}
+void print()
+{
+	while(head!=null)
+	{
+		System.out.println("the linked list value is"+head.info);
+	}
+}
+}
+
+class Linked_list
+{
+	public static void main(String args[])
+	{
+		int a;
+		char ch='y';
+		Scanner obj2=new Scanner(System.in);
+		while(ch=='y')
+		{
+			System.out.println("enter the node value:");
+			a=obj2.nextInt();
+		node obj3=new node(a);
+		System.out.println("add new node:the y");
+		ch=obj2.next().charAt(0);
+		}
+	obj3.print();			
+		
+	}
+}
