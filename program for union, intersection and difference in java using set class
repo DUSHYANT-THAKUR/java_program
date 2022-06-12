@@ -1,0 +1,19 @@
+import java.util.*;
+public class set1 {
+
+	public static void main(String[] args) {
+		HashSet obj=new HashSet();
+		Collections.addAll(obj,1,2,3,4,5);
+		HashSet obj1=new HashSet();
+		Collections.addAll(obj1,1,2,3);
+		//obj.retainAll(obj1);
+		System.out.println(obj);
+		System.out.println(obj1);
+		obj.addAll(obj1);
+		System.out.println(obj);
+		obj.removeAll(obj1);
+		System.out.println(obj);
+
+	}
+
+}
