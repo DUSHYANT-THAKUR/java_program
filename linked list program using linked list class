@@ -1,0 +1,21 @@
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Scanner;
+public class linked_list1 
+{
+public static void main(String args[])
+{
+	LinkedList<Integer> obj=new LinkedList<>();
+	Collections.addAll(obj,1,2,3,4,5);
+	System.out.println(obj);
+	obj.set(1, 5);
+	System.out.println(obj);
+	obj.add(3, 10);
+	System.out.println(obj);
+}
+
+
+	
+
+}
