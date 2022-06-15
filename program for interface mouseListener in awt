@@ -1,0 +1,67 @@
+//import java.awt.event.WindowEvent;
+import java.awt.*;
+import java.awt.event.*;
+
+class AwtDemo extends Frame implements MouseListener
+{
+	String msg="";
+	int mx=0,my=0;
+	AwtDemo()
+	{
+		
+		addMouseListener(this);
+		addWindowListener(new WindowAdapter(){public void windowClosing(WindowEvent e){System.exit(0);}});
+	}
+public void mouseClicked(MouseEvent e)
+{
+msg=msg+"cliked";
+mx=100;
+my=100;
+repaint();
+}
+public void mouseEntered(MouseEvent e)
+{
+	msg=msg+"Entered";
+	mx=100;
+	my=100;
+	repaint();	
+}
+public void mousePressed(MouseEvent e)
+{
+	msg=msg+"Pressed";
+	mx=100;
+	my=100;
+	repaint();
+}
+public void mouseExited(MouseEvent e)
+{
+	msg=msg+"Exited";
+	mx=100;
+	my=100;
+	repaint();
+}
+
+public void paint(Graphics g)
+{
+g.drawString(msg,mx,my);	
+}
+@Override
+public void mouseReleased(MouseEvent e)
+{
+	
+	msg=msg+"Released";
+	mx=100;
+	my=100;
+	repaint();
+}
+}
+public class Awt_main {
+
+	public static void main(String[] args)
+	{
+		AwtDemo obj=new AwtDemo();
+		obj.setTitle("Awt DEMO");
+		obj.setVisible(true);
+	}
+
+}
