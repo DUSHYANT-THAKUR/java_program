@@ -1,0 +1,21 @@
+public class Static_use 
+{
+ static int a=10;
+
+void fun()
+{
+a++;
+	System.out.println(a);
+}
+	public static void main(String[] args)
+	{
+		
+Static_use obj=new Static_use();
+obj.fun();
+Static_use obj1=new Static_use();
+obj1.fun();
+Static_use obj2=new Static_use();
+obj2.fun();
+	}
+
+}
