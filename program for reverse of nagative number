@@ -1,0 +1,25 @@
+class Solution {
+    public int reverse(int x)
+    {
+     int rem,sum=0;
+        int ori=x;
+       while(x!=0)
+       {
+           rem=x%10;
+           sum=(sum*10)+rem;
+           x=x/10;
+       }
+        
+    boolean isNegative=(ori<0)?true:false;
+    if(isNegative)
+    {
+       sum=sum*-1;
+        return sum;
+    }
+    else
+    {
+      return sum; 
+    }
+   
+}
+}
