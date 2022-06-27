@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ReverseString {
+
+  public static void main(String[] args) {
+
+    // take input
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Enter string: ");
+    String str = scan.nextLine();
+
+    // reverse the string
+    String reverseStr = reverseStringData(str);
+
+    // display result string
+    System.out.println( "Reverse String: " +
+                           reverseStr);
+  }
+
+  public static String reverseStringData(String s) {
+
+    String rev = new String();
+
+    for(int i=s.length()-1; i>=0; i--){
+      rev = rev + s.charAt(i);
+
+      // On every iteration new string 
+      // object will be created
+      System.out.println("Address of rev: "+
+                  System.identityHashCode(rev));
+    }
+
+    return rev;
+  }
+
+}
