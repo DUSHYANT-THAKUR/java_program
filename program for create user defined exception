@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class MyException extends Exception
+{
+	
+	public String toString()
+	{
+		return ("balance is low");
+		
+	}
+}
+public class user_define 
+{
+	static int total_bal,withdraw;
+
+	public static void main(String[] args) 
+	{
+		Scanner obj=new Scanner(System.in);
+		total_bal=obj.nextInt();
+		withdraw=obj.nextInt();
+try {		
+if(total_bal<withdraw)	
+{
+	throw new MyException();
+}
+
+	
+	}
+catch( Exception e)
+{
+	System.out.println(e);
+}
+
+}
+}
