@@ -1,0 +1,41 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class Character_stream {
+
+	public static void main(String[] args)
+	{
+	Scanner obj=new Scanner(System.in);
+	String str=obj.next();
+	char ch;
+	try
+	{
+	FileWriter fw=new FileWriter("E//abc.txt");
+	for(int i=0;i<str.length();i++)
+	{
+		ch=str.charAt(i);
+		fw.write(ch);
+	}
+	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+	try
+	{
+		FileReader fr=new FileReader("E//abc.txt");
+		while((ch=(char) fr.read())!=-1)
+		{
+			System.out.println(ch);
+		}
+	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+
+	}
+
+}
+
