@@ -1,0 +1,51 @@
+class Sol4
+{
+	int a,b,c;
+	Sol4(int a,int b)
+	{
+		this.a=a;
+		this.b=b;
+		
+	}
+	void division() throws ArithmeticException
+	{
+	c=a/b;	
+	System.out.println(c);
+	}
+	void String_print() throws NullPointerException
+	{
+		String str="";
+		System.out.println(str.charAt(0));
+		
+	}
+}
+public class throws_pro2 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		Sol4 ob=new Sol4(10,0);
+		try
+		{
+			ob.division();
+		}
+		catch(Exception obj)
+		{
+		System.out.println(obj);
+		System.out.println("exception has been handled");
+		}
+		try
+		{
+			ob.String_print();
+		}
+		catch(Exception s)
+		{
+			
+			System.out.println(s);
+			System.out.println("null pointer exception has been handled");
+		}
+
+	}
+
+}
