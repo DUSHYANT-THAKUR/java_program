@@ -1,0 +1,27 @@
+import java.util.*;
+public class Duplicate {
+	
+
+	public static void main(String[] args) {
+		int count=0;
+		Scanner obj=new Scanner(System.in);
+		
+		int[] arr=new int[5];
+		for(int i=0;i<5;i++)
+		{
+			arr[i]=obj.nextInt();
+		}
+		Arrays.sort(arr);
+		for(int i=0;i<4;i++)
+		{
+			if(arr[i]==arr[i+1])
+			{
+				count++;
+			}
+		}
+		System.out.println("the number of duplicate element is "+count);
+		// TODO Auto-generated method stub
+
+	}
+
+}
