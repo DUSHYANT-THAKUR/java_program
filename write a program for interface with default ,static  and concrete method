@@ -1,0 +1,34 @@
+interface i1
+{
+	static final int id=10;
+	void print();
+	default void not_mandatory()
+	{
+		System.out.println("i am not mandatory to invoke");
+	}
+	static void fun1()
+	{
+		System.out.println(" i am static method");
+	}
+}
+ class inter_face implements i1
+ {
+public void print()
+{
+ System.out.println("hello evryone"+id);
+}
+static void fun1()
+{
+	System.out.println(" i am static override method");
+}
+	public static void main(String[] args)
+	{
+inter_face obj=new inter_face();
+obj.print();
+obj.not_mandatory();
+obj.fun1();
+
+
+	}
+
+}
