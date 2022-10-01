@@ -1,0 +1,36 @@
+abstract class Tested
+{
+	int a,b,c;
+	Tested(int a,int b)
+	{
+	c=a+b;	
+	}
+	void speed()
+	{
+		System.out.println(c);
+	}
+	abstract void run();
+}
+ class Abstract_class extends Tested
+{
+	 Abstract_class()
+	 {
+		super(10,5);
+	 }
+	/* void speed()
+	 {
+	System.out.println("override");
+	 }*/
+	 void run()
+	 {
+		 System.out.println("i am abstract method");
+	 }
+
+	public static void main(String[] args) 
+	{
+Abstract_class obj=new Abstract_class();
+obj.speed();
+obj.run();
+	}
+
+}
