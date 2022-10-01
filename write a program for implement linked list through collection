@@ -1,0 +1,52 @@
+import java.util.*;
+import java.util.*;
+
+
+public class Linked_list5
+{
+	static void add_node(LinkedList<Integer> l)
+	{
+		Scanner obj1=new Scanner(System.in);
+		System.out.println("enter the no of element=");
+		int n=obj1.nextInt();
+		for(int i=0;i<n;i++)
+		{
+		
+		int item=obj1.nextInt();
+		l.add(item);
+		}
+	}
+	static void delete_node(LinkedList<Integer> l)
+	{
+		
+		Scanner obj=new Scanner(System.in);
+		System.out.println("press 'y' for delete to the item=");
+		char ch=obj.next().charAt(0);
+		while(ch=='y')
+		{
+		
+		int deleted_item=l.remove();
+		System.out.println("the deleted item is="+deleted_item);
+		System.out.println("do you want continue this process=");
+		ch=obj.next().charAt(0);
+		}
+	}
+  static void print(LinkedList<Integer> l)
+   {
+	   Iterator itr=l.iterator();
+	   while(itr.hasNext())
+	   {
+		   System.out.println(itr.next());
+	   }
+   }
+	public static void main(String[] args)
+	{
+		LinkedList<Integer> ob=new LinkedList<Integer>();
+		Linked_list5.add_node(ob);
+		Linked_list5.delete_node(ob);
+		Linked_list5.print(ob);
+		
+
+	}
+
+}
