@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Dushyant</title>
+    </head>
+    <body>
+        <p id="demo">hello</p>
+        <script>
+            var emp={id:10,name:"dushyant",class:"mca"};
+            document.getElementById("demo").innerHTML=emp.id+" "+emp.name+" "+emp.class;
+        </script>
+    </body>
+</html>
