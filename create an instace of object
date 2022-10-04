@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Dushyant</title>
+    </head>
+    <body>
+        <p id="demo">hello</p>
+        <script>
+            var emp=new Object();
+            emp.id=1;
+            emp.name="Dushyant";
+            emp.salary=1000;
+            document.getElementById("demo").innerHTML=emp.id+" "+emp.name+" "+emp.salary;
+        </script>
+    </body>
+</html>
