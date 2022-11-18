@@ -1,0 +1,36 @@
+import java.awt.*;
+import java.util.Scanner;
+
+public class Minimum 
+{
+int minimum(int arr[],int n,int loc)
+{
+int minimum=arr[0];
+for(int c=0;c<n-1;c++)
+{
+	if(minimum>arr[c])
+	{
+		minimum=arr[c];
+		loc=c;
+	}
+}
+return loc;
+}
+	public static void main(String[] args)
+	{
+  int loc=0,n;
+  Scanner obj=new Scanner(System.in);
+  System.out.println("enter the size=");
+  n=obj.nextInt();
+  int arr[]=new int[n];
+  System.out.println("enter the element=");
+  for(int i=0;i<n;i++)
+  {
+	  arr[i]=obj.nextInt();
+  }
+  Minimum obj1=new Minimum();
+  int result=obj1.minimum(arr, n, loc);
+  System.out.println(arr[result]);
+	}
+
+}
