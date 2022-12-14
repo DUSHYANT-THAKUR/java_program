@@ -1,0 +1,92 @@
+
+import java.util.Scanner;
+// Linked List Class
+
+    class Main
+{
+    Node head,tail;
+class Node 
+{
+    int data;
+    Node next,prev;
+   Node(int data)
+   {
+    this.prev=null;
+    this.data=data;
+    this.next=null;
+   
+   }
+}
+public void addNode(int item)
+{
+    Node n=new Node(item);
+    if(head==null)
+    {
+        head=n;
+        tail=n;
+    }
+    else
+    {
+        n.next=head;
+        head.prev=n;
+        head=head.prev;
+    }
+}
+public void deleteAtBegin()
+{
+    Node loc;
+   if(head==null)
+   {
+       System.out.println("Linked list is empty");
+   }
+   else
+   {
+       loc=head;
+   head=head.next;
+   loc.next=null;
+   head.prev=null;
+   }
+}
+public void deleteAtEnd()
+{
+Node loc;
+loc=tail;
+tail=tail.prev;
+tail.next=null;
+loc.prev=null;
+
+}
+public void deleteAtPosition()
+{
+    int loc;
+    loc=head;
+    System.out.println("enter the element after this inserted the node=");
+    int ele=obj.nextInt();
+    while(loc.data!=ele)
+    {
+    loc.next=    
+    }
+}
+
+public void dispNode()
+{
+   while(head!=null)
+   {
+       System.out.println(head.data);
+       head=head.next;
+   }
+}
+public static void main(String[] args)
+{
+ Main obj=new Main();
+ obj.addNode(10);
+ obj.addNode(20);
+ obj.addNode(30);
+ obj.addNode(40);
+ obj.addNode(50);
+ obj.addNode(60);
+ obj.deleteAtBegin();
+ obj.deleteAtEnd();
+ obj.dispNode();
+}
+}
