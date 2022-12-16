@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Main 
+{
+    static void Fibbonacci(int a,int b,int n)
+    {
+        int c;
+        if(n==0)
+        {
+            return;
+        }
+        c=a+b;
+        System.out.print(" "+c);
+        Fibbonacci(b,c,n-1);
+    }
+   public static void main(String[] args)
+   {
+       int a,b;
+       Scanner obj=new Scanner(System.in);
+       System.out.println("enter the number of terms:=");
+       int n=obj.nextInt();
+       System.out.println("enter the first and second terms:");
+       a=obj.nextInt();
+       b=obj.nextInt();
+       System.out.print(" "+a+" "+b+" ");
+        
+       Fibbonacci(a,b,n-2);
+   }
+}
